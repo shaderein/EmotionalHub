@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DBDaoCRUDTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-09-24T21:58:49" hostname="DESKTOP-1AQJS4K" time="0.754">
+  <properties/>
+  <testcase name="testAddBook" classname="DBDaoCRUDTest" time="0.166"/>
+  <testcase name="testUpdateBook" classname="DBDaoCRUDTest" time="0.094"/>
+  <testcase name="testUpdateAuthor" classname="DBDaoCRUDTest" time="0.057"/>
+  <testcase name="testListAllBooks" classname="DBDaoCRUDTest" time="0.064"/>
+  <testcase name="testDeleteAuthor" classname="DBDaoCRUDTest" time="0.065"/>
+  <testcase name="testAddAuthor" classname="DBDaoCRUDTest" time="0.039"/>
+  <testcase name="testBookOpenDBException" classname="DBDaoCRUDTest" time="0.026"/>
+  <testcase name="testDeleteAuthorCascade" classname="DBDaoCRUDTest" time="0.075"/>
+  <testcase name="testDeleteBook" classname="DBDaoCRUDTest" time="0.087"/>
+  <testcase name="testListAllAuthors" classname="DBDaoCRUDTest" time="0.046"/>
+  <testcase name="testAuthorOpenDBException" classname="DBDaoCRUDTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

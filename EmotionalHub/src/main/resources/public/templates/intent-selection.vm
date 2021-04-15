@@ -1,0 +1,32 @@
+#set( $title = "Select the content of your day" )
+#set( $style = "/public/styles/intent-selection.css" )
+#parse("public/templates/top.vm")
+
+#if ($user)
+#parse("public/templates/nav.vm")
+<div class="divContents">
+    <div class = "header container">
+        <h2>HELLO, ${user.getUserName()} !</h2>
+        <h4>Customize your experience!</h4>
+        <p>You will see what you want to see by clicking on the buttons below.</p>
+    </div>
+
+    <!-- want both main and sidebar in middle so put in containtoer-->
+    <div class="button-group">
+        <button id="cheer-up" class="button button1" onclick="selectIntention(this)">Cheer Me Up</button>
+        <button id="excite" class="button button1" onclick="selectIntention(this)">Excite Me</button>
+        <button id="laugh" class="button button2" onclick="selectIntention(this)">Make Me Laugh</button>
+        <button id="inspire" class="button button3" onclick="selectIntention(this)">Inspire Me</button>
+        <button id="motivate" class="button button3" onclick="selectIntention(this)">Motivate Me</button>
+        <button id="relax" class="button button4" onclick="selectIntention(this)">Relax</button>
+        <button id="chill" class="button button4" onclick="selectIntention(this)">Chill</button>
+        <!--button id="feelings" class="button button10">Care For My Feelings</button-->
+    </div>
+
+    <div class="sign-out">
+        <button id="skip" class="button button10" onclick="selectIntention(this)">Surprise Me</button>
+    </div>
+</div>
+#end
+
+#parse("public/templates/bottom.vm")

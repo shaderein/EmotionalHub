@@ -1,0 +1,30 @@
+<div class="card post" id="${post.getId()}" onclick="expand('${post.getId()}');">
+    <div class="card-body">
+        <div class="text-center">
+                    <span class="username"> #if ($post.isAnonymous())
+                        &lt;Anonymous&gt; #else
+                        ${userDao.get(${post.getUserId()}).getUserName()}
+                    #end </span>
+            <p class="card-text">${post.getContent()}</p>
+        </div>
+
+        #parse( "/public/templates/media.vm" )
+
+        <div class="like-dislike-div">
+            <span class="like-btn" >
+                <span>${postDao.getLikes(${post})}</span>
+                #if (${userDao.reaction(${user}, ${post.getId()})} == 1)
+                    <i class="fa fa-heart" aria-hidden="true" onclick="likePost(event, '${post.getId()}')"></i>
+                #else
+                    <i class="fa fa-heart-o" aria-hidden="true" onclick="likePost(event, '${post.getId()}')"></i>
+                #end
+            </span>
+            <!--
+            <span class="dislike-btn"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></span>
+            -->
+        </div>
+
+        #parse( "/public/templates/comments.vm" )
+
+    </div>
+</div>

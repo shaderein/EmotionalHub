@@ -1,0 +1,96 @@
+body {
+    font-family: Avenir;
+}
+
+.container{
+    text-align: right;
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+#showcase {
+    text-align: right;
+}
+
+.loginContent{
+    background-color: #e7e7e7;
+    /* background-image: url('../image/WechatIMG40.png');*/ 
+    background-repeat:no-repeat;
+
+    color: #555;
+    font-size: 30px;
+    line-height: 1.6em;
+    margin: 0;
+
+    padding-bottom: 50px;
+
+    text-align: center;
+}
+
+
+.content{
+    padding-bottom: 30px;
+}
+
+/* field */ 
+.field{
+    padding: 20px;
+}
+
+/* create new account */ 
+.createAccount a:link, a:visited {
+    background-color: grey;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+.createAccount a:hover, a:active {
+    background-color: rgba(128, 128, 128, 0.801);
+}
+
+.createAccount{
+    padding-bottom: 250px;
+}
+
+/* navigation bar */
+#navbar{
+    background-color: #333;
+    color:#fff;
+    padding-top: 15px;
+}
+
+#navbar ul{
+    padding: 0;
+    list-style: none;
+}
+
+#navbar li{
+    display: inline;
+}
+
+#navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+/* showcase with image background */
+#showcase{
+    background-position: center;
+    margin-bottom: 30px; /*responsive height */
+    text-align: center;
+}
+
+.loginText{
+    text-align: center;
+    padding: 80px;
+}
+
+#main-footer {
+    padding-top: 150px;
+}

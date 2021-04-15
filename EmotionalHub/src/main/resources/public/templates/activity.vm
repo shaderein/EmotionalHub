@@ -1,0 +1,54 @@
+#set( $title = "Your Posts" )
+#set( $style = "/public/styles/feed.css" )
+
+#parse("/public/templates/top.vm")
+#parse("public/templates/nav.vm")
+
+<div class="content card-columns">
+#if ($posts)
+    #foreach($post in $posts)
+        <div class="card post" id="$post.getId()" onclick="expand('${post.getId()}');">
+            <div class="card-body">
+                <div class="view">
+                    <div class="text-center">
+                        <span class="username">${userDao.get(${post.getUserId()}).getUserName()}</span>
+                        <p class="card-text">${post.getContent()}</p>
+                        #parse( "/public/templates/media.vm" )
+                    </div>
+
+                    <div class="post-control shrunken">
+                        <form action="#" method="post">
+                            <button class="btn-right" name="delete" value="${post.getId()}">Delete</button>
+                        </form>
+                        <button class="btn-left" name="edit" onclick=openEditor("${post.getId()}")>Edit</button>
+                    </div>
+                </div>
+
+                <div class="edit hidden">
+                    <form action="#" method="post" onsubmit="analyzePostInSeparateRoute(this)">
+                        <textarea class="form-control" rows="5" name="content" style="display: block">${post.getContent()}</textarea>
+                        <button class="btn-right" name="update" value="${post.getId()}">Update</button>
+                    </form>
+                    <button class="btn-left" name="cancel" onclick=closeEditor("${post.getId()}")>Cancel</button>
+                </div>
+
+                <div class="like-dislike-div">
+                    <span class="like-btn" >
+                        <span>${postDao.getLikes(${post})}</span>
+                        #if (${userDao.reaction(${user}, ${post.getId()})} == 1)
+                            <i class="fa fa-heart" aria-hidden="true" onclick="likePost(event, '${post.getId()}')"></i>
+                        #else
+                            <i class="fa fa-heart-o" aria-hidden="true" onclick="likePost(event, '${post.getId()}')"></i>
+                        #end
+                    </span>
+                </div>
+
+                #parse( "/public/templates/comments.vm" )
+
+            </div>
+        </div>
+    #end
+#end
+</div>
+
+#parse("/public/templates/bottom.vm")

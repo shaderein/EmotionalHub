@@ -1,0 +1,35 @@
+#set( $title = "Your Feed" )
+#set( $style = "/public/styles/feed.css" )
+
+#parse("/public/templates/top.vm")
+#parse("public/templates/nav.vm")
+
+<div class="content card-columns">
+#if ($posts)
+    #set($pos = 0)
+    #set($prompt = $promptObj.getTopPrompt())
+    #set($promptIdx = -1)
+    #set($posIdx = $promptObj.getRandomPos())
+
+    #foreach($post in $posts)
+        #if ($pos == $posIdx)
+            #parse( "/public/templates/post.vm" )
+            #set( $pos = $pos + 1 )
+        #end
+
+        #if ($pos == 5)
+            #set($pos = 0)
+            #set($posIdx = $promptObj.getRandomPos())
+            #set($promptIdx = $promptObj.getRandomPromptIdx())
+            #set($prompt = $promptObj.getPrompts().get($promptIdx))
+        #end
+        <!-- Due to some technicalities this doesn't guarantee one posting block per 5 blocks, but it's fine. -->
+
+        #parse( "/public/templates/post-block.vm" )
+
+        #set( $pos = $pos + 1 )
+    #end
+#end
+</div>
+
+#parse("/public/templates/bottom.vm")

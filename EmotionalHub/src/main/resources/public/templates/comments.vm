@@ -1,0 +1,24 @@
+#set ( $comments = ${commentDao.getCommentsByPost($post.getId())} )
+#if (${comments.size()} > 0)
+<div class="comment-count">
+    <span>${comments.size()} comments</span>
+</div>
+#end
+
+<div class="comment-section shrunken">
+    #foreach($comment in $comments)
+        <div class="comment">
+                    <span class="commenter"> #if ($comment.isAnonymous())
+                        &lt;Anonymous&gt; #else
+                        ${userDao.get(${comment.getUserId()}).getUserName()}
+                    #end </span>
+            <span>: ${comment.getContent()}</span>
+        </div>
+    #end
+</div>
+
+<form action="/feed" method="post" class="shrunken" enctype="multipart/form-data">
+    <input type="text" class="form-control" name="comment" style="display: block" placeholder="Make a comment...">
+    <label> Comment anonymously? <input type="checkbox" name="anonymous" value="anon"> </label>
+    <button class="btn-right" name="discuss" value="${post.getId()}">Comment!</button>
+</form>

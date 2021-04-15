@@ -1,0 +1,14 @@
+#if (${post.getMediaType().equals("ogg")} ||
+    ${post.getMediaType().equals("wbm")} ||
+    ${post.getMediaType().equals("mp4")})
+    <video controls>
+        <source  src="/serve-media?id=${post.getMediaId()}&type=video" type="video/${post.getMediaType()}">
+    </video>
+#elseif(${post.getMediaType().equals("mp3")} ||
+    ${post.getMediaType().equals("wav")})
+    <audio controls>
+        <source src="/serve-media?id=${post.getMediaId()}&type=audio" type="audio/${post.getMediaType()}">
+    </audio>
+#elseif(${post.getMediaId()})
+    <img src="/serve-media?id=${post.getMediaId()}&type=img">
+#end

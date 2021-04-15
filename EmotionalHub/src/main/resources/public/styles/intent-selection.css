@@ -1,0 +1,93 @@
+/* overall */
+body, html {
+    font-family: Avenir;
+    height: 100%;
+    background-image: url('../image/WechatIMG40.png');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.divContents{
+    color: #555;
+    background: rgba(255, 255, 255, 0.9) !important;  /* 0.7 opacity */
+    font-size: 16px;
+    line-height: 1.6em;
+    width:80%;
+    margin: auto;
+    padding: 40px 30px;
+}
+
+.header {
+    color: black;
+    text-align: center;
+}
+
+/* skip */
+.sign-out {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+/* buttons */
+.button-group{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px; 
+    padding-bottom: 50px;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color:white;
+    color: #000000;
+}
+
+.button1 {
+    padding: 16px 30px;
+    background-color: rgba(239, 158, 58, 0.7);
+    border: 2px solid rgb(239, 158, 58);
+}
+
+.button2 {
+    padding: 16px 30px;
+    background-color: rgba(238, 228, 52, 0.7);
+    border: 2px solid rgb(239, 229, 68);
+}
+
+.button3 {
+    padding: 16px 28px;
+    background: rgba(93, 212, 111, 0.7);
+    border: 2px solid rgb(93, 212, 111);
+}
+
+.button4 {
+    padding: 16px 35px;
+    background: rgba(89, 176, 233, 0.7);
+    border: 2px solid rgb(89, 176, 233);
+}
+
+.button10 {
+    padding: 16px 30px;
+    background-color: rgba(229, 184, 167, 0.7);
+    border: 2px solid rgb(188, 160, 153);
+}

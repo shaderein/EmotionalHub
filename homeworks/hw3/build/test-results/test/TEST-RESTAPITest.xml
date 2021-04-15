@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RESTAPITest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-10-02T00:47:58" hostname="DESKTOP-1AQJS4K" time="1.333">
+  <properties/>
+  <testcase name="testAddBook" classname="RESTAPITest" time="0.515"/>
+  <testcase name="testListAuthors" classname="RESTAPITest" time="0.062"/>
+  <testcase name="testDelAuthor" classname="RESTAPITest" time="0.17"/>
+  <testcase name="testListBooks" classname="RESTAPITest" time="0.165"/>
+  <testcase name="testAddAuthor" classname="RESTAPITest" time="0.06"/>
+  <testcase name="testDeleteAuthorCascade" classname="RESTAPITest" time="0.201"/>
+  <testcase name="testDelBook" classname="RESTAPITest" time="0.158"/>
+  <system-out><![CDATA[[{"id":1,"name":"author1","numOfBooks":10,"nationality":"American"}]
+[{"id":1,"title":"book1","isbn":"123456","publisher":"publisher1","year":2021,"authorId":1}]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

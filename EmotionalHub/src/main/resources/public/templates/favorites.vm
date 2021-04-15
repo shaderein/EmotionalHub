@@ -1,0 +1,15 @@
+#set( $title = "Your Favorites" )
+#set( $style = "/public/styles/feed.css" )
+
+#parse("/public/templates/top.vm")
+#parse("public/templates/nav.vm")
+
+<div class="content card-columns">
+#if ($posts)
+    #foreach($post in $posts)
+        #parse( "/public/templates/post-block.vm" )
+    #end
+#end
+</div>
+
+#parse("/public/templates/bottom.vm")

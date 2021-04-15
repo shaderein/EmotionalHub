@@ -1,0 +1,49 @@
+#set( $title = "User Registration" )
+#set( $style = "/public/styles/login.css" )
+#parse("public/templates/top.vm")
+
+<nav id = "navbar">
+        <div class = "container">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+        </div>
+</nav>
+
+<div class="loginContent">
+#if($success)
+    <h2>User was successfully registered!</h2>
+    <form action="/login">
+        <input type="submit" value="Login"/>
+    </form>
+    <br/>
+#else
+#if($failure)
+    <h2>Failed to register the user!</h2>
+    <br/>
+#end
+
+<h2>Register</h2>
+
+<form action="/adduser" method="post" class="content" id="formAddUser">
+    <div class = "field">
+        <label for="email">Email: </label>
+        <input type="text" name="email" placeholder="Email" id="email" required>
+    </div>
+    <div class = "field">
+        <label for="pwd">Password: </label>
+        <input type="password" name="pwd" placeholder="Password" id="pwd"/>
+    </div>
+    <div class = "field">
+        <label for="userName">Display Name: </label>
+        <input type="text" name="userName" placeholder="Your Name" id="userName"/>
+    </div>
+    <br />
+    <input type="submit" value="Register" id="submitAddUser"/>
+</form>
+#end
+</div>
+
+#parse("public/templates/bottom.vm")

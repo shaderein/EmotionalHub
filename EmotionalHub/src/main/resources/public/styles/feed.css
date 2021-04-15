@@ -1,0 +1,122 @@
+body {
+    font-family: Avenir;
+    font-size: 14pt !important;
+    height: 100%;
+    background-image: url('../image/WechatIMG40.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content {
+    padding-left: 38px;
+    padding-right: 38px;
+}
+
+img, audio, video {
+    width: 100%;
+}
+
+.username {
+    color: cornflowerblue;
+    font-size: 15pt;
+}
+
+.post {
+    background: rgba(255, 255, 255, 0.7) !important;  /* 0.7 opacity */
+    border: 2px solid #eeeeee;
+    padding: 5px;
+    display: inline-block;
+}
+
+.post:hover {
+    background-color: #fffbec !important;
+    transition: background-color .2s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out;
+    -o-transition: background-color .2s ease-in-out;
+}
+
+.form-post {
+    color: #555555;
+    padding: 20px;
+    background: rgba(255, 241, 180, 0.9) !important;
+}
+
+form label {
+    font-size: 11pt !important;
+}
+
+p {
+    vertical-align: center;
+}
+
+textarea {
+    display: block;
+    border-radius: 5px;
+}
+
+button {
+    margin: 10px !important;
+    padding: 6px 10px;
+    background-color: #f2fdf2;
+    color: black;
+    border-radius: 5px !important;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.btn-left {
+    display: inline;
+    text-align: left;
+}
+
+.btn-right {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.shrunken {
+    display: none;
+}
+
+.expanded {
+    position: fixed !important;
+    left: 20% !important;
+    right: 20% !important;
+    top: 20% !important;
+    bottom: 20% !important;
+    width: 60% !important;
+    min-height: 60% !important;
+    overflow: scroll !important;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 1) !important;
+}
+
+.like-dislike-div {
+    padding: 10px 0;
+    float: right;
+}
+
+.like-dislike-div span i {
+    font-size: 25px;
+}
+
+.comment-count {
+    padding: 10px 0;
+    font-size: 12pt;
+    color: #736e6e;
+    float: left;
+}
+
+.comment-section {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.commenter {
+    color: cornflowerblue;
+}

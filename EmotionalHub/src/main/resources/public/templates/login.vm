@@ -1,0 +1,43 @@
+#set( $title = "User Registration" )
+#set( $style = "/public/styles/login.css" )
+#parse("public/templates/top.vm")
+
+<div class="loginContent">
+    <nav id = "navbar">
+        <div class = "container">
+            <ul>
+                <li> <a href="#">About Us</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class = "loginText">
+        <h1>Log In</h1>
+    </div>
+
+    #if($failure)
+        <h2>Login failed! (incorrect email or password)</h2>
+        <br/>
+    #end
+
+        <form action="/login" method="post" class="content" id="formAddUser">
+            <div class = "field">
+                <label for="email">Email: </label>
+                <input type="text" name="email" placeholder="Email" id="email" required>
+            </div>
+            <div class = "field">
+                <label for="pwd">Password: </label>
+                <input type="password" name="pwd" placeholder="Password" id="pwd"/>
+            </div>
+            <br/>
+            <input type="submit" value="Login" id="submitLogin"/>
+        </form>
+
+        <div class = "createAccount">
+            <a href="/adduser">Create new account</a>
+        </div>
+
+</div>
+
+#parse("public/templates/bottom.vm")

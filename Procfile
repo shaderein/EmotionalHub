@@ -1,0 +1,1 @@
+web: java -jar homeworks/hw6/build/libs/MyBooksApp-1.0-SNAPSHOT.jar

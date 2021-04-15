@@ -1,0 +1,54 @@
+#set( $title = "Add Book" )
+#parse("public/templates/top.vm")
+
+#if($added)
+<h2>Book was successfully added!</h2>
+<br />
+#end
+
+#if($failedAdd)
+<h2>Failed to add the Book!</h2>
+<br />
+#end
+
+<h2>Add a new Book</h2>
+<form action="/addbook" method="post" class="content" id="formAddBook" onsubmit="return validateIsbn();">
+    <div>Book</div>
+    <div>
+        <label for="title">Title: </label>
+        <input type="text" name="title" placeholder="title" id="title" required>
+    </div>
+    <div>
+        <label for="isbn">ISBN: </label>
+        <input type="text" name="isbn" placeholder="isbn" id="isbn" />
+    </div>
+    <div>
+        <label for="publisher">Publisher: </label>
+        <input type="text" name="publisher" placeholder="publisher" id="publisher"/>
+    </div>
+    <div>
+        <label for="year">Year: </label>
+        <input type="number" name="year" placeholder="2020" id="year"/>
+    </div>
+    <br/>
+
+    <div>Author</div>
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" placeholder="name" id="name" required>
+    </div>
+    <div>
+        <label for="nationality">Nationality: </label>
+        <input type="text" name="nationality" placeholder="nationality" id="nationality" />
+    </div>
+    <div>
+        <label for="numOfBooks">Number of books: </label>
+        <input type="number" name="numOfBooks" placeholder="1" id="numOfBooks" min="1" max="200"/>
+    </div>
+    <br/>
+    <div id="divSubmit">
+        <input type="submit" value="Add" class="submit" id="submitAddBook" />
+    </div>
+</form>
+
+#parse("public/templates/bottom.vm")

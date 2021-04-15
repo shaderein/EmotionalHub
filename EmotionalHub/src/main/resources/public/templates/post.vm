@@ -1,0 +1,11 @@
+<div class="card post form-post" id="make-post-${promptIdx}" onclick="expand('make-post-${promptIdx}');">
+    <p class="text-center"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+        $prompt</p>
+    <form action="#" method="post" class="shrunken" enctype="multipart/form-data" onsubmit="analyzePostInSeparateRoute(this)">
+        <label> Post anonymously? <input type="checkbox" name="anonymous" value="anon"> </label>
+        <textarea class="form-control" rows="5" name="content" placeholder="Your content here..."></textarea>
+        <input type="file" name="media" id="media" accept="image/*,audio/*,video/*">
+        <input type="hidden" name="prompt-idx" value="$promptIdx" />
+        <button class="btn-make-post btn-right" name="posted" value="true">Post</button>
+    </form>
+</div>

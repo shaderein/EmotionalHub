@@ -1,0 +1,19 @@
+#set( $title = "Books List" )
+#parse("public/templates/top.vm")
+
+#if ($books)
+<h1>List of the your favorite books:</h1>
+<div class="divContents">
+    <ol>
+    <p>
+        #foreach($book in $books )
+            <li class="content book"><i>$book.title</i> (isbn: $book.isbn), published by $book.publisher in $book.year.
+                <button name="delete" value="$book.isbn" class="$book.isbn">X</button></li>
+        #end
+        </p>
+    </ol>
+</div>
+#end
+<script src="js/delbook.js"></script>
+
+#parse("public/templates/bottom.vm")

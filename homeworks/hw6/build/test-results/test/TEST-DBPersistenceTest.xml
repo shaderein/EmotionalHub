@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DBPersistenceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-10-27T11:52:22" hostname="fv-az148" time="0.03">
+  <properties/>
+  <testcase name="insertAuthorTest1" classname="DBPersistenceTest" time="0.005"/>
+  <testcase name="insertAuthorTest2" classname="DBPersistenceTest" time="0.003"/>
+  <testcase name="insertAuthorTest3" classname="DBPersistenceTest" time="0.008"/>
+  <testcase name="insertAuthorTest4" classname="DBPersistenceTest" time="0.007"/>
+  <testcase name="parameterizedInsertAuthorTest" classname="DBPersistenceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

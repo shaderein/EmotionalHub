@@ -1,0 +1,2 @@
+F[{"id":1,"name":"author1","numOfBooks":10,"nationality":"American"}]
+^[{"id":1,"title":"book1","isbn":"123456","publisher":"publisher1","year":2021,"authorId":1}]
